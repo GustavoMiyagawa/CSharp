@@ -11,11 +11,16 @@ namespace Desafio3.Model
         [Required]
         [EmailAddress]
         public string Email { get; private set; }
+        public DateTime DtBirth { get; private set; }
+        [Range(18, 199, ErrorMessage = "Você precisa ser maior de 18 anos!!")]
+        public int Age { get; private set; }
 
-        public User(string name, string email)
+        public User(string name, string email, DateTime dtBirth, int age)
         {
             this.Name = name;
             this.Email = email;
+            this.DtBirth = dtBirth;
+            this.Age = age;
         }
     }
 }

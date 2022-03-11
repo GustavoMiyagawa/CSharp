@@ -12,9 +12,11 @@ namespace Desafio3.Model
       Students = new List<Student>();
     }
 
-    public void saveStudent(string name, string email)
+    public void saveStudent(string name, string email, int year, int day, int month)
     {
-      Student = new Student(name, email);
+      var date = new DateTime(year, month, day);
+      var age = DateTime.Now.Year - year;
+      Student = new Student(name, email, date, age);
 
       var context = new ValidationContext(Student, null, null);
       var results = new List<ValidationResult>();
@@ -42,7 +44,8 @@ namespace Desafio3.Model
       {
         var name = student.Name;
         var email = student.Email;
-        System.Console.WriteLine($"Nome: {name}, Email: {email}");
+        var age = student.Age;
+        System.Console.WriteLine($"Nome: {name}, Email: {email}, Age: {age}");
       }
     }
 

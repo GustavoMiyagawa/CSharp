@@ -25,10 +25,11 @@ namespace Desafio3
       // System.Console.WriteLine(result);
 
       StudentRepository studentRepository = new StudentRepository();
-      studentRepository.saveStudent("Gus", "guscedro");
-      studentRepository.saveStudent("Gustavo Miyagawa", "miyagawa@cedro");
-      studentRepository.saveStudent("douglas", "douglas@cedro");
-      studentRepository.saveStudent("Antônio", "antoni@cedro");
+      studentRepository.saveStudent("Gustavo Nunes dos Santos", "guscedro@cedro.com", 1992, 12, 8);
+      // studentRepository.saveStudent("Gustavo Nunes dos Santos", "guscedro@cedro.com", 1992, 12, 8);
+      studentRepository.saveStudent("Gustavo Miyagawa", "miyagawa@cedro", 2007, 22, 02);
+      studentRepository.saveStudent("douglas Miyashita", "douglas@cedro", 1981, 24, 01);
+      studentRepository.saveStudent("Antônio Ferreira", "antoni@cedro", 1956, 04, 11);
 
       // studentRepository.Imprimir();
 
@@ -42,6 +43,16 @@ namespace Desafio3
 
 
       // studentRepository.getStudents();
+
+      // var date = new DateTime(1992, 12, 08);
+		  // var format = String.Format("{0:dd/MM/yyyy}", date);
+      // string texto = "teste";
+      // var anoNascimento = date.Year;
+      // var datadehoje = new DateTime();
+      // var hoje = DateTime.Now;
+		  // Console.WriteLine(date.Year);
+      // System.Console.WriteLine(hoje.Year);
+      // System.Console.WriteLine(hoje.Year - date.Year);
 
       Console.ReadLine();
     }

@@ -14,9 +14,9 @@ namespace Desafio3.Controller
 
     public string CreateLesson(string name, string data, string studentName, string studentEmail, string facilitatorName, string facilitatorEmail, string classroomName, string classroomLink)
     {
-      var result = Service.CreateLesson(name, data, studentName, studentEmail, facilitatorName, facilitatorEmail, classroomName, classroomLink);
+      // var result = Service.CreateLesson(name, data, studentName, studentEmail, facilitatorName, facilitatorEmail, classroomName, classroomLink);
 
-      return result;
+      return "result";
     }
 
     // public Lesson GetLesson()
