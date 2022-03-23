@@ -52,13 +52,13 @@ namespace Desafio4.Services
 
         public void GetAll()
         {
-            // var StudentList = StudentRepository.GetAllLINQExpression();
+            var StudentList = StudentRepository.GetAllLINQExpression().Select(s => s).OrderBy(s => s).ToList();
 
-            // foreach (var item in StudentList)
-            // {
-            //     System.Console.WriteLine($"Nome: {item.Name}, Email: {item.Email}, Age: {item.Age}");
-            // }
-            StudentRepository.GetAllLINQExpression();
+            foreach (var item in StudentList)
+            {
+                System.Console.WriteLine($"Nome: {item.Name}, Email: {item.Email}, Age: {item.Age}");
+            }
+            // StudentRepository.GetAllLINQExpression();
         }
     }
 }

@@ -58,7 +58,7 @@ namespace Desafio3.Model
 
       foreach (var item in scoreQuery)
       {
-        System.Console.WriteLine($"Nome: {item.Name}, Email: {item.Email}");
+        System.Console.WriteLine($"Nome: {item.Name}, Email: {item.Email}, Age: {item.Age}");
       }
     }
 
@@ -70,7 +70,7 @@ namespace Desafio3.Model
 
       foreach (var item in scoreQuery)
       {
-        System.Console.WriteLine($"Nome: {item.Name}, Email: {item.Email}");
+        System.Console.WriteLine($"Nome: {item.Name}, Email: {item.Email}, Age: {item.Age}");
       }
     }
 
@@ -80,7 +80,7 @@ namespace Desafio3.Model
 
       foreach (var item in query)
       {
-        System.Console.WriteLine($"Nome: {item.Name}, Email: {item.Email}");
+        System.Console.WriteLine($"Nome: {item.Name}, Email: {item.Email}, Age: {item.Age}");
       }
     }
   }

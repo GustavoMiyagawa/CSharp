@@ -15,19 +15,19 @@ namespace Desafio4.Repository
             Students.Add(student);
         }
 
-        public void GetAllLINQExpression()
+        public List<Student> GetAllLINQExpression()
         {
-            var scoreQuery = Students.Select(s => s)
-                                    .OrderBy(s => s)
-                                    .ToList();
+            // var scoreQuery = Students.Select(s => s)
+            //                         .OrderBy(s => s)
+            //                         .ToList();
 
-            foreach (var item in scoreQuery)
-            {
-                System.Console.WriteLine($"Nome: {item.Name}, Email: {item.Email}, Age: {item.Age}");
-            }
+            // foreach (var item in scoreQuery)
+            // {
+            //     System.Console.WriteLine($"Nome: {item.Name}, Email: {item.Email}, Age: {item.Age}");
+            // }
 
             // return scoreQuery;
-            // return Students;
+            return Students;
         }
 
         

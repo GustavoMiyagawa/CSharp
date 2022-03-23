@@ -26,18 +26,18 @@ namespace Desafio3
 
       StudentRepository studentRepository = new StudentRepository();
       studentRepository.saveStudent("Gustavo Nunes dos Santos", "guscedro@cedro.com", 1992, 12, 8);
-      // studentRepository.saveStudent("Gustavo Nunes dos Santos", "guscedro@cedro.com", 1992, 12, 8);
+      studentRepository.saveStudent("", "guscedro@cedro.com", 1992, 12, 8);
       studentRepository.saveStudent("Gustavo Miyagawa", "miyagawa@cedro", 2007, 22, 02);
       studentRepository.saveStudent("douglas Miyashita", "douglas@cedro", 1981, 24, 01);
       studentRepository.saveStudent("Antônio Ferreira", "antoni@cedro", 1956, 04, 11);
 
       // studentRepository.Imprimir();
 
-      studentRepository.GetAll();
+      // studentRepository.GetAll();
 
       // studentRepository.FilterByName("Gustavo");
 
-      // studentRepository.LINQExpression();
+      studentRepository.LINQExpression();
 
       // studentRepository.LINQExpressionFilterByName("Gustavo");
 

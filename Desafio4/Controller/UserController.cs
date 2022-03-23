@@ -5,6 +5,11 @@ namespace Desafio4.Controller
     public class UserController
     {
         public UserServices UserServices;
+
+        public UserController()
+        {
+            UserServices = new UserServices();
+        }
         public void CreateUser
         (
             string name,
@@ -19,8 +24,6 @@ namespace Desafio4.Controller
             string role
         )
         {
-            UserServices = new UserServices();
-
             UserServices.CreateUser(name, year, month, day, gender, email, cpf, login, password, role);
         }
 

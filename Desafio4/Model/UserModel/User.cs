@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Desafio4.Model
 {
-  public abstract class User
+  public abstract class User : IComparable
   {
     [Required(ErrorMessage = "O campo Name é obrigatório")]
     [MinLength(10)]
@@ -35,6 +35,12 @@ namespace Desafio4.Model
       this.Login = login;
       this.Password = password;
       this.Role = role;
+    }
+
+    public int CompareTo(object obj)
+    {
+      User that = obj as User;
+      return this.Name.CompareTo(that.Name);
     }
   }
 }
