@@ -19,14 +19,16 @@ namespace GoCedroAPI.Services
 
         public IEnumerable<Student> GetAll()
         {
-            //var students = studentRepository.GetAll().Select(s => s).OrderBy(s => s).ToList();
+            var students = studentRepository.GetAll().Select(s => s).OrderBy(s => s).ToList();
 
-            return studentRepository.GetAll();
+            return students;
+        }
 
-            //foreach (var item in students)
-            //{
-            //    Console.WriteLine($"Nome: {item.Name}");
-            //}
+        public IEnumerable<Student> GetStudentByName(string name)
+        {
+            var students = studentRepository.GetAll().Where(s => s.Name.Contains(name)).ToList();
+
+            return students;
         }
     }
 }

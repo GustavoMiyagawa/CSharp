@@ -20,13 +20,19 @@ namespace GoCedroAPI.Controllers
         public void CreateUser([FromBody] Student student)
         {
             studentServices.CreateStudent(student);
-            //Console.WriteLine(student.Name);
         }
 
         [HttpGet]
         public IEnumerable<Student> GetStudents()
         {
             return studentServices.GetAll();
+        }
+
+        //https://docs.microsoft.com/pt-br/aspnet/core/mvc/controllers/routing?view=aspnetcore-6.0
+        [HttpGet("{name}")]
+        public IEnumerable<Student> GetStudentByName(string name)
+        {
+            return studentServices.GetStudentByName(name);
         }
     }
 }
