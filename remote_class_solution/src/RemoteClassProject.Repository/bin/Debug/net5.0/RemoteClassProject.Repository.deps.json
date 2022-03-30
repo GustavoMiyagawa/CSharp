@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "RemoteClassProject.Repository/1.0.0": {
+        "dependencies": {
+          "RemoteClassProject.Domain": "1.0.0"
+        },
+        "runtime": {
+          "RemoteClassProject.Repository.dll": {}
+        }
+      },
+      "RemoteClassProject.Domain/1.0.0": {
+        "runtime": {
+          "RemoteClassProject.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RemoteClassProject.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RemoteClassProject.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

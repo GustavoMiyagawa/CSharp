@@ -1,0 +1,88 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "RemoteClassProject.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/RemoteClassProject.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RemoteClassProject.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RemoteClassProject.Domain/1.0.0": {
+      "type": "project",
+      "path": "../RemoteClassProject.Domain/RemoteClassProject.Domain.csproj",
+      "msbuildProject": "../RemoteClassProject.Domain/RemoteClassProject.Domain.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "RemoteClassProject.Domain >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/gustavo/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/gustavo/Cedro/CSharp/remote_class_solution/src/RemoteClassProject.Repository/RemoteClassProject.Repository.csproj",
+      "projectName": "RemoteClassProject.Repository",
+      "projectPath": "/Users/gustavo/Cedro/CSharp/remote_class_solution/src/RemoteClassProject.Repository/RemoteClassProject.Repository.csproj",
+      "packagesPath": "/Users/gustavo/.nuget/packages/",
+      "outputPath": "/Users/gustavo/Cedro/CSharp/remote_class_solution/src/RemoteClassProject.Repository/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/gustavo/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {
+            "/Users/gustavo/Cedro/CSharp/remote_class_solution/src/RemoteClassProject.Domain/RemoteClassProject.Domain.csproj": {
+              "projectPath": "/Users/gustavo/Cedro/CSharp/remote_class_solution/src/RemoteClassProject.Domain/RemoteClassProject.Domain.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.406/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
