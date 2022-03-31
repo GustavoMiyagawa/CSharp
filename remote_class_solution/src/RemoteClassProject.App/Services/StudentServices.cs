@@ -1,3 +1,4 @@
+using RemoteClassProject.App.Interface;
 using RemoteClassProject.Domain.Entities.Users;
 using RemoteClassProject.Repository.Repositories;
 using System.Collections.Generic;
@@ -5,7 +6,7 @@ using System.Linq;
 
 namespace RemoteClassProject.App.Services
 {
-    public class StudentServices
+    public class StudentServices : IStudentServices
     {
         public StudentRepository studentRepository;
 

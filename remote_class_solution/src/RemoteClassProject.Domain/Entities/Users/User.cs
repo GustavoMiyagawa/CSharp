@@ -17,6 +17,7 @@ namespace RemoteClassProject.Domain.Entities.Users
         [Required(ErrorMessage = "O campo idade é obrigatório")]
         [Range(18, 199, ErrorMessage = "Você precisa ser maior de 18 anos!!")]
         public int Age { get; private set; }
+        [EnumDataType(typeof(GenderType))]
         public GenderType Gender { get; private set; }
         [Required(ErrorMessage = "O campo E-mail é obrigatório")]
         [EmailAddress]
@@ -26,13 +27,13 @@ namespace RemoteClassProject.Domain.Entities.Users
         public string Password { get; private set; }
         public Role Role { get; private set; }
 
-        public User(string name, int year, int month, int day, string email, string cpf, string login, string password)
+        public User(string name, int year, int month, int day, GenderType gender, string email, string cpf, string login, string password)
         {
             this.Name = name;
             //this.Year = year;
             this.DtBirth = DefineDataDeAniversario(year, month, day);
             this.Age = DateTime.Now.Year - year;
-            this.Gender = GenderType.OTHERS;
+            this.Gender = gender;
             this.Email = email;
             this.CPF = cpf;
             this.Login = login;

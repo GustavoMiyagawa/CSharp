@@ -1,9 +1,10 @@
 using System.Collections.Generic;
 using RemoteClassProject.Domain.Entities.Users;
+using RemoteClassProject.Repository.Interface;
 
 namespace RemoteClassProject.Repository.Repositories
 {
-    public class StudentRepository
+    public class StudentRepository : IStudentRepository
     {
         private static List<Student> Students = new List<Student>();
 
