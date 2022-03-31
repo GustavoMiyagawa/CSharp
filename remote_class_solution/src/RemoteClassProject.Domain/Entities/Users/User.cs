@@ -25,9 +25,10 @@ namespace RemoteClassProject.Domain.Entities.Users
         public string CPF { get; private set; }
         public string Login { get; private set; }
         public string Password { get; private set; }
+        [EnumDataType(typeof(Role))]
         public Role Role { get; private set; }
 
-        public User(string name, int year, int month, int day, GenderType gender, string email, string cpf, string login, string password)
+        public User(string name, int year, int month, int day, GenderType gender, string email, string cpf, string login, string password, Role role)
         {
             this.Name = name;
             //this.Year = year;
@@ -38,7 +39,7 @@ namespace RemoteClassProject.Domain.Entities.Users
             this.CPF = cpf;
             this.Login = login;
             this.Password = password;
-            //this.Role = (Role)Enum.Parse(typeof(Role), role.ToUpper());
+            this.Role = role;
         }
 
         public DateTime DefineDataDeAniversario(int year, int month, int day)

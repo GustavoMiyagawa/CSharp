@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using RemoteClassProject.Domain.Entities.Users;
-using RemoteClassProject.Repository.Interface;
+using RemoteClassProject.Domain.Interface;
 
 namespace RemoteClassProject.Repository.Repositories
 {

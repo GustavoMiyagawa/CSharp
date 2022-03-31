@@ -33,5 +33,14 @@ namespace RemoteClassProject.App.Services
 
             return students;
         }
+
+        public Student GetStudentById(string id)
+        {
+            // gid.ToString().ToLower() == sid.ToLower()
+            // var student = studentRepository.GetAll().Where(s => s.StudentID.Equals(id));
+            var student = studentRepository.GetAll().FirstOrDefault(stu => stu.StudentID.ToString() == id);
+
+            return student;
+        }
     }
 }

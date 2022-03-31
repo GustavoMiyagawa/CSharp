@@ -8,5 +8,6 @@ namespace RemoteClassProject.App.Interface
         void CreateStudent(Student student);
         IEnumerable<Student> GetAll();
         IEnumerable<Student> GetStudentByName(string name);
+        Student GetStudentById(string id);
     }
 }

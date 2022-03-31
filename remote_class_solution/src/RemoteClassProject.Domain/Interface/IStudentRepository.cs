@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using RemoteClassProject.Domain.Entities.Users;
 
-namespace RemoteClassProject.Repository.Interface
+namespace RemoteClassProject.Domain.Interface
 {
     public interface IStudentRepository
     {
