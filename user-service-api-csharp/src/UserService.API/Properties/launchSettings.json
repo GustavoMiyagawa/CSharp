@@ -1,0 +1,18 @@
+﻿{
+  "profiles": {
+    "UserService.API": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": " http://localhost:5199",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "MONGO_DB_HOST": "localhost",
+        "MONGO_DB_PORT": "27017",
+        "MONGO_DB_PASSWORD": "xCZhWrWlUCHEYg21ki",
+        "MONGO_DB_USER": "local_user_db"
+      }
+    }
+  }
+}
