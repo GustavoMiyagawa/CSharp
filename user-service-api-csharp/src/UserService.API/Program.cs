@@ -9,6 +9,7 @@ builder.Configuration.SetBasePath(Directory.GetCurrentDirectory())
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddResources(builder.Configuration);
+builder.Services.AddServices();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();

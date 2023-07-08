@@ -1,20 +1,24 @@
 using MongoDB.Driver;
 using UserService.Domain.Entities.User;
 using UserService.Domain.Interfaces.Repositories;
+using UserService.Repository.MongoDb.Wrappers;
 
 namespace UserService.Repository.MongoDb.Repositories;
 
 public class UserRepository : IUserRepository
 {
-    private readonly IMongoCollection<User> _mongoCollection;
+    private MongoDbClientWrapper _databaseClient;
+    private readonly IMongoCollection<User> _userCollection;
 
-    public UserRepository(IMongoCollection<User> mongoCollection)
+    public UserRepository(MongoDbClientWrapper databaseClient)
     {
-        _mongoCollection = mongoCollection;
+        _databaseClient = databaseClient;
+
+        _userCollection = _databaseClient.GetUserCollection();
     }
 
     public async Task PostUserAsync(User user)
     {
-        await _mongoCollection.InsertOneAsync(user);
+        await _userCollection.InsertOneAsync(user);
     }
 }

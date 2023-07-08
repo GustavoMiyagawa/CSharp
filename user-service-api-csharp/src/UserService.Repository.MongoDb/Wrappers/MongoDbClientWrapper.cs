@@ -1,4 +1,5 @@
 using MongoDB.Driver;
+using UserService.Domain.Entities.User;
 using UserService.Repository.MongoDb.Resources;
 
 namespace UserService.Repository.MongoDb.Wrappers;
@@ -22,5 +23,11 @@ public class MongoDbClientWrapper
         var mongoDbClient = new MongoClient(settings);
 
         UserDataContext = mongoDbClient.GetDatabase(resources.DatabaseName);
+    }
+    
+    public IMongoCollection<User> GetUserCollection()
+    {
+        return UserDataContext
+            .GetCollection<User>(Resources.UsersCollectionName);
     }
 }

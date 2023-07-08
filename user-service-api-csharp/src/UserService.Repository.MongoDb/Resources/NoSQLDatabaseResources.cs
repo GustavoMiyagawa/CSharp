@@ -8,4 +8,5 @@ public class NoSQLDatabaseResources
     public string User { get; set; }
     public string DatabaseName { get; set; }
     public string ConnectionString => $"mongodb://{User}:{Password}@{Host}:{Port}/?authSource={DatabaseName}";
+    public string UsersCollectionName { get; set; }
 }

@@ -1,5 +1,6 @@
 {
   "NoSQLDatabaseResources": {
-    "DatabaseName": "LOCAL_USER_DB"
+    "DatabaseName": "LOCAL_USER_DB",
+    "UsersCollectionName": "LocalUsersCollection"
   }
 }
