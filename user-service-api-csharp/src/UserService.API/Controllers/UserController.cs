@@ -16,9 +16,9 @@ public class UserController : ControllerBase
 
     [HttpGet]
     [Route("")]
-    public async Task<IActionResult> GetUserAsync([FromRoute] string username)
+    public async Task<List<User>> GetAllUserAsync()
     {
-        return default;
+        return await _userService.GetAllUserAsync();
     }
 
     [HttpPost]
@@ -26,5 +26,18 @@ public class UserController : ControllerBase
     public async Task PostUserAsync([FromBody] User user)
     {
         await _userService.PostUserAsync(user);
+    }
+
+    [HttpGet]
+    [Route("{username}")]
+    public async Task<User> GetUserAsync([FromRoute] string username)
+    {
+        return await _userService.GetUserByUsername(username);
+    }
+
+    [HttpPatch]
+    [Route("{username}")]
+    public async Task<User> UpdateAsync([FromRoute] string username, [FromBody] )
+    {
     }
 }

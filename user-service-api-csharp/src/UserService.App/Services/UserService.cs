@@ -13,13 +13,18 @@ public class UserService : IUserService
         _userRepository = userRepository;
     }
 
-    public Task<List<User>> GetUserAsync(string username)
+    public Task<List<User>> GetAllUserAsync()
     {
-        throw new NotImplementedException();
+        return _userRepository.GetAllUsersAsync();
     }
 
     public async Task PostUserAsync(User user)
     {
         await _userRepository.PostUserAsync(user);
+    }
+
+    public async Task<User> GetUserByUsername(string username)
+    {
+        return await _userRepository.GetUserByUsername(username);
     }
 }

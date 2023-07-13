@@ -17,8 +17,18 @@ public class UserRepository : IUserRepository
         _userCollection = _databaseClient.GetUserCollection();
     }
 
+    public async Task<List<User>> GetAllUsersAsync()
+    {
+        return await _userCollection.AsQueryable().ToListAsync();
+    }
+
     public async Task PostUserAsync(User user)
     {
         await _userCollection.InsertOneAsync(user);
+    }
+
+    public async Task<User> GetUserByUsername(string username)
+    {
+        return await _userCollection.Find(c => c.Username.Equals(username)).FirstOrDefaultAsync();
     }
 }

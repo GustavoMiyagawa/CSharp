@@ -4,6 +4,7 @@ namespace UserService.App.Interfaces;
 
 public interface IUserService
 {
-    Task<List<User>> GetUserAsync(string username);
+    Task<List<User>> GetAllUserAsync();
     Task PostUserAsync(User user);
+    Task<User> GetUserByUsername(string username);
 }
